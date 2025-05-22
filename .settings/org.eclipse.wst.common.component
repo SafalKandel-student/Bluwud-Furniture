@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+                            
+    
+    
+    
+    
+    
+    <wb-module deploy-name="Bluwud-Furniture">
+                                                        
+        
+        
+        
+        
+        
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                                                        
+        
+        
+        
+        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                
+        <dependent-module archiveName="jakarta.el-api-4.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jakarta.el-api-4.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.servlet.jsp.jstl-api-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jakarta.servlet.jsp.jstl-api-3.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.activation-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jakarta.activation-2.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.servlet.jsp.jstl-api-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jakarta.servlet.jsp.jstl-api-2.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.servlet-api-5.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jakarta.servlet-api-5.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.servlet.jsp.jstl-3.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jakarta.servlet.jsp.jstl-3.0.1.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="mysql-connector-j-9.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/mysql-connector-j-9.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.servlet.jsp.jstl-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jakarta.servlet.jsp.jstl-2.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.xml.bind-api-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jakarta.xml.bind-api-3.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.servlet.jsp-api-3.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jakarta.servlet.jsp-api-3.1.1.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+        <dependent-module archiveName="jfreechart-1.5.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/OneDrive - islingtoncollege.edu.np/Desktop/javabackup/jfreechart-1.5.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                                                        
+        
+        
+        
+        
+        
+        <property name="java-output-path" value="/Bluwud-Furniture/build/classes"/>
+                                                
+        
+        
+        
+        
+        <property name="context-root" value="Bluwud-Furniture"/>
+                                                    
+    
+    
+    
+    
+    
+    </wb-module>
+                        
+
+
+
+
+
+</project-modules>

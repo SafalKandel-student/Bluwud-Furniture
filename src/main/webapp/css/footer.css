@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+#footer {
+	background-color: #f6f4f0; /* changed */
+	color: #333; /* darker text for contrast */
+	padding: 30px 20px;
+	transition: background-color 0.3s, color 0.3s;
+	width: 100%;
+}
+
+#footer:hover {
+	background-color: #eae6df; /* slightly darker or different shade */
+	color: #000; /* slightly darker text on hover */
+}
+
+.footer-about, .footer-contact {
+	flex: 1;
+	min-width: 250px;
+	padding: 10px;
+}
+
+.footer-about h3, .footer-contact h4 {
+	color: #f9c410;
+}
+
+.footer-bottom {
+	text-align: center;
+	margin-top: 20px;
+	border-top: 1px solid #ccc; /* lighter border */
+	padding-top: 10px;
+	color: #666;
+}

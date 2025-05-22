@@ -1,0 +1,122 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background:  url('${pageContext.request.contextPath}/resources/images/system/homebackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-box {
+    background: rgba(255, 250, 243, 0.95);
+    padding: 60px 70px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 550px;
+    box-sizing: border-box;
+    border: 1px solid #e4d8c2;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #5d4b3c;
+    font-size: 28px;
+}
+
+.row {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    color: #7a6651;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 14px;
+    border: 1px solid #d1c4a7;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fefefe;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #a3876a;
+    box-shadow: 0 0 6px rgba(163, 135, 106, 0.3);
+    outline: none;
+}
+
+.login-button,
+.register-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #a3876a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.login-button:hover,
+.register-button:hover {
+    background-color: #8f745b;
+}
+
+.error-message {
+    color: #a94442;
+    background-color: #f2dede;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    border: 1px solid #ebcccc;
+}
+
+.success-message {
+    color: #3c763d;
+    background-color: #dff0d8;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    border: 1px solid #d6e9c6;
+}
+.login-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.login-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.03);
+}
+
