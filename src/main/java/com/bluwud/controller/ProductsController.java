@@ -214,7 +214,7 @@ public class ProductsController extends HttpServlet {
 	        }
 	        productService.updateProduct(product);
 	    } else {
-	        // For new product, set default image if none was uploaded
+	       
 	        if (imagePath == null) {
 	            product.setImage_path("resources/images/default-product.png");
 	        }

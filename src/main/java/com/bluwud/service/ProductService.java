@@ -139,19 +139,17 @@ public class ProductService {
             try (PreparedStatement deleteCartStmt = conn.prepareStatement(deleteCartQuery);
                  PreparedStatement deleteProductStmt = conn.prepareStatement(deleteProductQuery)) {
 
-                // Delete from cart
                 deleteCartStmt.setInt(1, id);
                 deleteCartStmt.executeUpdate();
 
-                // Delete from product
                 deleteProductStmt.setInt(1, id);
                 int rowsAffected = deleteProductStmt.executeUpdate();
 
-                conn.commit(); // Commit transaction
+                conn.commit(); 
                 return rowsAffected > 0;
 
             } catch (Exception e) {
-                conn.rollback(); // Rollback if any error
+                conn.rollback(); 
                 e.printStackTrace();
             }
         } catch (Exception e) {

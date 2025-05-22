@@ -9,10 +9,6 @@ import com.bluwud.config.DbConfig;
 import com.bluwud.model.UserModel;
 import com.bluwud.util.PasswordUtil;
 
-/**
- * Service class for handling login operations. Connects to the database,
- * verifies user credentials, and returns user information.
- */
 public class LoginService {
 
     private Connection dbConn;
@@ -34,7 +30,6 @@ public class LoginService {
             return null;
         }
 
-        // Include user_ID, user_name, user_password, and user_role
         String query = "SELECT user_id, user_name, user_password, user_role FROM users WHERE user_name = ?";
         try (PreparedStatement stmt = dbConn.prepareStatement(query)) {
             stmt.setString(1, userModel.getUser_name());
@@ -42,7 +37,7 @@ public class LoginService {
 
             if (result.next()) {
                 if (validatePassword(result, userModel)) {
-                    // ✅ Set all necessary fields
+                    
                     UserModel authenticatedUser = new UserModel();
                     authenticatedUser.setUser_id(result.getInt("user_id"));
                     authenticatedUser.setUser_name(result.getString("user_name"));

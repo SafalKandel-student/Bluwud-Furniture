@@ -19,7 +19,6 @@ public class ContactService {
         }
     }
 
-    // Insert a contact form entry
     public void insertContact(ContactModel contact) throws SQLException {
         String query = "INSERT INTO contact_form (full_name, email, message, user_id) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = dbConn.prepareStatement(query)) {
@@ -31,7 +30,6 @@ public class ContactService {
         }
     }
 
-    // Get contact form entries by user ID
     public List<ContactModel> getContacts() {
         List<ContactModel> contacts = new ArrayList<>();
         String query = "SELECT * FROM contact_form";
@@ -57,7 +55,6 @@ public class ContactService {
         return contacts;
     }
 
-    // Delete a contact form entry by ID
     public void deleteContactById(int contactId) throws SQLException {
         String query = "DELETE FROM contact_form WHERE contact_form_id = ?";
         try (PreparedStatement stmt = dbConn.prepareStatement(query)) {

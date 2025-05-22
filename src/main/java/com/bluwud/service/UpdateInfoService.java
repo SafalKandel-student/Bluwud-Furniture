@@ -50,7 +50,7 @@ public class UpdateInfoService {
 
 		} catch (SQLException | ClassNotFoundException e) {
 			System.err.println("Error updating user: " + e.getMessage());
-			e.printStackTrace(); // Optional: for detailed error trace
+			e.printStackTrace(); 
 			return false;
 		}
 	}

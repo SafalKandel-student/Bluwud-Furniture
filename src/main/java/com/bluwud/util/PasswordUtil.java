@@ -39,12 +39,10 @@ public class PasswordUtil {
 		return keyGen.generateKey();
 	}
 
-	// Password derived AES 256 bits secret key
 	public static SecretKey getAESKeyFromPassword(char[] password, byte[] salt) {
 		try {
 			SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
-			// iterationCount = 65536
-			// keyLength = 256
+			
 			KeySpec spec = new PBEKeySpec(password, salt, 65536, 256);
 			SecretKey secret = new SecretKeySpec(factory.generateSecret(spec).getEncoded(), "AES");
 			return secret;
@@ -56,26 +54,22 @@ public class PasswordUtil {
 		return null;
 	}
 
-	// return a base64 encoded AES encrypted text
 	public static String encrypt(String user_name, String user_password) throws Exception {
 	    try {
-	        // 16 bytes salt
+	      
 	        byte[] salt = getRandomNonce(SALT_LENGTH_BYTE);
 
-	        // GCM recommended 12 bytes iv
+	        
 	        byte[] iv = getRandomNonce(IV_LENGTH_BYTE);
 
-	        // secret key from password
 	        SecretKey aesKeyFromPassword = getAESKeyFromPassword(user_name.toCharArray(), salt);
 
 	        Cipher cipher = Cipher.getInstance(ENCRYPT_ALGO);
 
-	        // ASE-GCM needs GCMParameterSpec
 	        cipher.init(Cipher.ENCRYPT_MODE, aesKeyFromPassword, new GCMParameterSpec(TAG_LENGTH_BIT, iv));
 
 	        byte[] cipherText = cipher.doFinal(user_password.getBytes(UTF_8));
 
-	        // prefix IV and Salt to cipher text
 	        byte[] cipherTextWithIvSalt = ByteBuffer.allocate(iv.length + salt.length + cipherText.length)
 	            .put(iv)
 	            .put(salt)
@@ -93,7 +87,6 @@ public class PasswordUtil {
 		try {
 			byte[] decode = Base64.getDecoder().decode(encryptedPassword.getBytes(UTF_8));
 
-			// get back the iv and salt from the cipher text
 			ByteBuffer bb = ByteBuffer.wrap(decode);
 
 			byte[] iv = new byte[IV_LENGTH_BYTE];
@@ -105,7 +98,6 @@ public class PasswordUtil {
 			byte[] cipherText = new byte[bb.remaining()];
 			bb.get(cipherText);
 
-			// get back the aes key from the same password and salt
 			SecretKey aesKeyFromPassword = PasswordUtil.getAESKeyFromPassword(username.toCharArray(), salt);
 
 			Cipher cipher = Cipher.getInstance(ENCRYPT_ALGO);

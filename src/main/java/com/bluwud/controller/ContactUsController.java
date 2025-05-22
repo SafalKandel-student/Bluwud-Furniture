@@ -96,7 +96,6 @@ public class ContactUsController extends HttpServlet {
             request.setAttribute("errorMessage", "Admins are not allowed to submit contact messages.");
         }
 
-        // Always redirect customers back to contact form
         request.getRequestDispatcher(RedirectionUtil.contactUrl).forward(request, response);
     }
 }

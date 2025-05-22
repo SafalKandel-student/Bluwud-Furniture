@@ -75,19 +75,17 @@ public class UserService {
                 deleteBookingsStmt.setInt(1, user_id);
                 deleteBookingsStmt.executeUpdate();
 
-                // Delete contact form entries
                 deleteContactStmt.setInt(1, user_id);
                 deleteContactStmt.executeUpdate();
 
-                // Delete user
                 deleteUserStmt.setInt(1, user_id);
                 boolean userDeleted = deleteUserStmt.executeUpdate() > 0;
 
-                conn.commit(); // Commit if all succeed
+                conn.commit(); 
                 return userDeleted;
 
             } catch (SQLException e) {
-                conn.rollback(); // Rollback on failure
+                conn.rollback(); 
                 logger.log(Level.SEVERE, "Transaction failed while deleting user with ID: " + user_id, e);
                 return false;
             }

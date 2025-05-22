@@ -9,7 +9,7 @@ import com.bluwud.service.ProductService;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 
-@WebFilter("/*") // Intercepts all requests
+@WebFilter("/*") 
 public class CategoryFilter implements Filter {
 
     private ProductService productService;

@@ -21,7 +21,7 @@ public class CartService {
     }
 
     public void addToCart(CartModel cart) throws SQLException {
-        // Check if product already in cart
+       
         String checkQuery = "SELECT cart_id, cart_quantity FROM cart WHERE user_id = ? AND product_id = ?";
         try (PreparedStatement checkStmt = dbConn.prepareStatement(checkQuery)) {
             checkStmt.setInt(1, cart.getUser_id().getUser_id());
@@ -29,7 +29,7 @@ public class CartService {
             ResultSet rs = checkStmt.executeQuery();
             
             if (rs.next()) {
-                // Update existing cart item
+                
                 int newQuantity = rs.getInt("cart_quantity") + cart.getCart_quantity();
                 String updateQuery = "UPDATE cart SET cart_quantity = ? WHERE cart_id = ?";
                 try (PreparedStatement updateStmt = dbConn.prepareStatement(updateQuery)) {

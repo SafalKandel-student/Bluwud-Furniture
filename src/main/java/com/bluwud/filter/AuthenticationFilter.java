@@ -33,14 +33,14 @@ public class AuthenticationFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
 
-		// 💡 Add no-cache headers to prevent browser from caching protected pages
+		
 		res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
 		res.setHeader("Pragma", "no-cache"); // HTTP 1.0
 		res.setDateHeader("Expires", 0); // Proxies
 
 		String uri = req.getRequestURI();
 
-		// Allow CSS and root (optional), but not /home
+
 		if (uri.endsWith(".css") || uri.endsWith(ROOT)) {
 		    chain.doFilter(request, response);
 		    return;

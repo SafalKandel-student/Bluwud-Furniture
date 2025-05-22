@@ -7,17 +7,10 @@ import java.sql.SQLException;
 import com.bluwud.config.DbConfig;
 import com.bluwud.model.UserModel;
 
-/**
- * RegisterService handles the registration of new students. It manages database
- * interactions for student registration.
- */
 public class RegisterService {
 
 	private Connection dbConn;
 
-	/**
-	 * Constructor initializes the database connection.
-	 */
 	public RegisterService() {
 		try {
 			this.dbConn = DbConfig.getDbConnection();
@@ -60,7 +53,7 @@ public class RegisterService {
 	        }
 	        System.err.println("Error during registration: " + e.getMessage());
 	        e.printStackTrace();
-	        return false; // Return false instead of null for clearer flow
+	        return false;
 	    } finally {
 	        try {
 	            dbConn.setAutoCommit(true);

@@ -14,10 +14,6 @@ import com.bluwud.service.RegisterService;
 import com.bluwud.util.PasswordUtil;
 import com.bluwud.util.RedirectionUtil;
 
-/**
- * RegisterController handles user registration requests and processes form
- * submissions. It also manages file uploads and account creation.
- */
 @WebServlet(asyncSupported = true, urlPatterns = { "/register" })
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2, // 2MB
 		maxFileSize = 1024 * 1024 * 10, // 10MB

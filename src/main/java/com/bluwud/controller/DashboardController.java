@@ -24,12 +24,12 @@ public class DashboardController extends HttpServlet {
 
         DashboardService dashboardService = new DashboardService();
 
-        // Set real dashboard metrics
+
         request.setAttribute("customers", dashboardService.getTotalUsers());
-        request.setAttribute("revenue", "$3,465 "); // You can implement real revenue logic later
+        request.setAttribute("revenue", "$3,465 "); 
         request.setAttribute("totalOrders", dashboardService.getTotalOrders());
         request.setAttribute("totalReturns", 1789); 
-        request.setAttribute("categoryTypeMap", dashboardService.getCategoryType());// Example static data
+        request.setAttribute("categoryTypeMap", dashboardService.getCategoryType());
 
         
 
